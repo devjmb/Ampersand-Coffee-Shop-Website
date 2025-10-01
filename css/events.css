@@ -1,0 +1,350 @@
+/* === Hero === */
+.events-hero {
+  height: calc(100vh - 75px);
+  width: 100%;
+  background: url('../images/events/Events banner.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  position: relative;
+  color: var(--font-cream);
+  padding: 60px 60px 80px 155px;
+}
+.events-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+.events-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+.events-hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 3.5rem;
+  margin-bottom: 25px;
+  letter-spacing: 3.5px;
+
+}
+.events-hero p {
+  font-size: 1.4rem;
+  margin-bottom: 50px;
+}
+.hero-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 2px solid var(--font-cream);
+  border-radius: 25px;
+  color: var(--font-cream);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.hero-btn:hover {
+  background: var(--font-cream);
+  color: var(--color-green);
+}
+
+/* === Subheader === */
+.events-subheader {
+  position: sticky;
+  top: 78px;
+  background: #EFDBC2;
+  z-index: 999;
+  padding: 12px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 78px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.events-subheader h2 {
+  font-family: 'DM Serif Display', serif;
+  color: var(--color-green);
+  letter-spacing: 3.5px;
+  font-size: 2rem;
+  margin: 0;
+  line-height: 1;
+}
+.events-subheader p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--font-dark);
+}
+
+/* === Layout === */
+.events-container {
+  display: flex;
+  align-items: flex-start; 
+  gap: 40px;
+  padding: 40px 60px;
+}
+
+/* Aside Menu */
+.aside-menu {
+  position: sticky;
+  top: 180px;
+  background: #EFDBC2;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  min-width: 220px;
+}
+.aside-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.aside-menu li { 
+  margin: 15px 0; 
+}
+.aside-menu a {
+  text-decoration: none;
+  color: var(--font-dark);
+  font-weight: 600;
+  padding: 6px 10px;
+  display: block;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+.aside-menu a:hover {
+  background: var(--color-green);
+  color: #fff;
+}
+
+/* === Event Cards === */
+.events-items {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 40px; /* side padding for all cards */
+}
+.event-card {
+  width: 100%;
+  padding: 30px;
+  border-radius: 12px;
+  scroll-margin-top: 120px;
+  box-sizing: border-box;
+  scroll-margin-top: 195px; /* adjust to match subheader + navbar height */
+}
+.event-card h2 {
+  font-size: 2rem;
+  color: var(--color-green);
+  margin-bottom: 15px;
+}
+
+.event-card hr {
+  border: none;
+  border-top: 1px solid var(--color-green);
+  margin-bottom: 30px;
+}
+
+.event-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.event-content img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-content img:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Event Details with Bullet List */
+.event-details ul {
+  margin: 0;
+  padding-left: 20px; 
+  list-style-type: disc;
+  color: var(--font-dark);
+}
+.event-details li {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+.event-details li strong {
+  color: var(--color-green);
+  font-weight: 600;
+}
+
+.events-closing {
+  text-align: center;
+  margin: 195px 50px;
+  padding-right: 125px;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: var(--color-green);
+  font-family: 'DM Serif Display', serif;
+}
+
+@media (max-width: 480px) {
+
+  .event-card {
+    scroll-margin-top: 120px;
+  } 
+
+  /* === Hero === */
+  .events-hero {
+    height: 100vh;
+    padding: 120px 20px 40px 20px;  
+    justify-content: center;
+    text-align: center;
+    background-position: center;
+  }
+
+  .events-hero-content {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .events-hero h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+
+  .events-hero p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  .hero-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* === Subheader === */
+  .events-subheader {
+    position: sticky;
+    top: 78px;  
+    height: auto;
+    padding: 10px;
+  }
+
+  .events-subheader h2 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .events-subheader p {
+    font-size: 0.85rem;
+  }
+
+  /* === Layout === */
+  .events-container {
+    flex-direction: column;    
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  /* Aside Menu */
+  .aside-menu {
+    position: static;              
+    top: auto;
+    width: 100%;                
+    min-width: auto;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 0;
+    background: none; 
+    box-shadow: none; 
+  }
+
+  .aside-menu ul {
+    display: flex;
+    flex-wrap: wrap;         
+    justify-content: center; 
+    gap: 12px;
+    padding: 10px 15px;
+    margin: 0;
+    list-style: none;
+    border-radius: 12px;
+    background: var(--font-cream);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  .aside-menu li {
+    margin: 0;  
+  }
+
+  .aside-menu a {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: var(--font-dark);
+    text-decoration: none;
+    transition: 0.2s;
+  }
+
+  /* Event Cards */
+  .events-items {
+    padding: 0;
+    gap: 40px;
+  }
+
+  .event-card {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .event-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .event-card hr {
+    margin: 15px auto;
+    width: 100%; 
+  }
+
+  .event-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .event-content img {
+    width: 100%;
+    max-width: 280px;
+    height: 200px;
+    object-fit: cover;  
+    margin-bottom: 15px;
+  }
+
+  .event-details ul {
+    padding-left: 18px;
+    text-align: left;  
+  }
+
+  .event-details li {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  /* Closing Note */
+  .events-closing {
+    text-align: center;
+    margin: 40px 20px;
+    padding: 0 20px;
+    font-size: 1.2rem;
+  }
+}
+

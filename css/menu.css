@@ -1,0 +1,378 @@
+/* === Hero Section === */
+.menu-hero {
+  height: calc(100vh - 75px);
+  width: 100%;
+  background: url('../images/menu/menu_banner.jpg') center center/cover no-repeat;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  text-align: right;
+  position: relative;
+  color: var(--font-cream);
+  padding: 200px 155px 60px 60px;
+}
+
+.menu-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.menu-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.menu-hero h1 {
+  font-family:'DM Serif Display', serif;
+  letter-spacing: 3.5px;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.menu-hero p {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 2px solid var(--font-cream);
+  border-radius: 25px;
+  color: var(--font-cream);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: var(--font-cream);
+  color: var(--color-green);
+}
+
+/* === Subheader === */
+.menu-subheader {
+  position: sticky;
+  top: 78px;
+  background: var(--font-cream);
+  z-index: 999;
+  padding: 12px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 78px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.menu-subheader h2 {
+  font-family: 'DM Serif Display', serif;
+  color: var(--color-green);
+  letter-spacing: 3.5px;
+  font-size: 2rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.menu-subheader p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--font-dark);
+}
+
+
+/* === Menu Layout === */
+
+
+.menu-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 40px 60px; /* spacing around main menu area */
+}
+
+/* Aside Nav */
+.aside-menu {
+  position: sticky;
+  top: 180px;
+  align-self: flex-start;
+  padding: 20px 25px;   
+  background: #EFDBC2;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  min-width: 220px;
+}
+
+.aside-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.aside-menu li {
+  margin: 15px 0;
+}
+
+.aside-menu a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--font-dark);
+  transition: all 0.2s ease;
+  display: block;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.aside-menu a:hover {
+  background: var(--color-green);
+  color: #fff;
+}
+
+/* Menu Items */
+.menu-items {
+  margin: 50px 0;
+  flex: 1;
+}
+
+.menu-items h2[id] {
+  scroll-margin-top: 195px;
+}
+
+.menu-items h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--color-green);
+}
+
+.menu-items em {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.menu-items hr {
+  border: none;
+  border-top: 1px solid var(--color-green);
+  margin-bottom: 30px;
+}
+
+.menu-items table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 40px 50px;
+  margin-bottom: 40px; /* spacing between tables */
+}
+
+.menu-items td {
+  text-align: center;
+  vertical-align: top;
+  width: 33%;
+}
+
+.menu-items td img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-items td img:hover {
+  transform: translateY(-8px) scale(1.08); 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);  
+}
+
+.menu-items td h3 {
+  margin: 8px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--font-dark);
+}
+
+.menu-items td p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--font-dark);
+}
+
+/* dashed border for promo items */
+#featured + hr + table tr td:nth-child(odd) img {
+  border: 4px dashed var(--color-green)
+}
+#featured + hr + table tr td:nth-child(even) img {
+  border: 4px dashed rgb(235, 19, 19);
+}
+
+/* Swap colors for even rows */
+#featured + hr + table tr:nth-child(even) td:nth-child(odd) img {
+  border-color: rgb(235, 19, 19);
+}
+#featured + hr + table tr:nth-child(even) td:nth-child(even) img {
+  border-color: var(--color-green)
+}
+
+
+/* === Mobile Version === */
+@media (max-width: 480px) {
+
+.menu-items h2[id] {
+  scroll-margin-top: 150px; 
+}
+
+
+  /* === Hero Section === */
+  .menu-hero {
+    height: 100vh;                  
+    padding: 120px 20px 40px 20px;  
+    align-items: center;          
+    justify-content: center;         
+    text-align: center;
+  }
+
+  .menu-hero-content {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .menu-hero h1 {
+    font-size: 2rem;               
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+
+  .menu-hero p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  .hero-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+  
+
+  /* === Subheader === */
+  .menu-subheader {
+  position: sticky;
+  top: 78px;   
+  z-index: 999;
+  }
+
+  .menu-subheader h2 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .menu-subheader p {
+    font-size: 0.85rem;
+  }
+
+  /* === Menu Layout === */
+  .menu-container {
+    flex-direction: column;         
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  /* Aside Nav */
+  .aside-menu {
+    position: static;              
+    top: auto;
+    width: 100%;                
+    min-width: auto;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .aside-menu ul {
+  display: flex;
+  flex-wrap: wrap;         
+  justify-content: center; 
+  gap: 12px;               
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  }
+
+  .aside-menu li {
+    margin: 0;
+  }
+
+  .aside-menu a {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  /* Menu Items */
+  .menu-items {
+    margin: 0;
+    width: 100%;
+  }
+
+  .menu-items h2 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .menu-items table {
+    border-spacing: 20px 30px;       
+    display: flex;
+    flex-direction: column;          
+    gap: 20px;
+  }
+
+  .menu-items td {
+    width: 100%;                    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .menu-items td img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 8px;
+  }
+
+  .menu-items td h3 {
+    font-size: 1rem;
+  }
+
+  .menu-items td p {
+    font-size: 0.85rem;
+  }
+
+  #featured + hr + table tr td img {
+    border-width: 3px;
+  }
+
+.menu-items table tr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  text-align: center;
+  width: 100%;
+}
+
+  .menu-notes {
+  padding: 0 35px 0 50px;       
+  margin-bottom: 40px;      
+  font-size: 0.85rem;    
+  color: var(--font-dark);      
+}
+
+}
+
+
