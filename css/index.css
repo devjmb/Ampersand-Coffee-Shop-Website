@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
-  padding: 2.5rem;
+  padding-bottom: 80px;
 }
 
 .hero-container {
@@ -51,8 +51,9 @@
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
-  gap: 1rem;
-  padding-right: 125px
+  padding-right: 125px;
+  position: relative;
+  bottom: 20px; 
 }
 
 /* Button style */
@@ -63,6 +64,8 @@
   color: var(--font-cream);
   text-decoration: none;
   font-weight: 500;
+  margin-left: 75px;
+  margin-bottom: 25px;
   transition: all 0.3s ease;
 }
 
